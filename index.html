@@ -1,1 +1,189 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ossama — Art & Design</title>
+  <meta name="description" content="Portfolio of Ossama — freelance art & design for brands and creators." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0b0d10;         /* deep charcoal */
+      --card: #0f1217;       /* slightly lighter */
+      --muted: #a7b0c0;      /* soft slate */
+      --text: #e9edf4;       /* near-white */
+      --accent: #8dd0ff;     /* sky */
+      --accent-2: #ffd28d;   /* warm */
+      --ring: rgba(141,208,255,.35);
+      --radius: 18px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;background:radial-gradient(1200px 800px at 80% -10%, rgba(141,208,255,.09), transparent 60%),
+                                        radial-gradient(900px 600px at -10% 10%, rgba(255,210,141,.08), transparent 60%),
+                                        var(--bg);color:var(--text);font:16px/1.6 Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+    header{position:sticky;top:0;background:linear-gradient(to bottom, rgba(11,13,16,.9), rgba(11,13,16,.6), transparent);backdrop-filter:saturate(120%) blur(8px);z-index:20}
+    .nav{display:flex;align-items:center;gap:18px;justify-content:space-between}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:34px;height:34px;border-radius:12px;background:linear-gradient(135deg, var(--accent), var(--accent-2));box-shadow:0 6px 16px rgba(141,208,255,.35)}
+    .brand h1{font:800 18px Inter, system-ui;letter-spacing:.4px;margin:0}
+    .pill{display:inline-flex;align-items:center;gap:8px;background:rgba(141,208,255,.12);border:1px solid var(--ring);padding:8px 12px;border-radius:999px;color:var(--accent)}
+    .btn{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(180deg, rgba(141,208,255,.15), rgba(141,208,255,.12));border:1px solid var(--ring);border-radius:12px;padding:12px 16px;transition:.2s box-shadow, .2s transform}
+    .btn:hover{box-shadow:0 12px 30px rgba(141,208,255,.12);transform:translateY(-1px)}
+
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:42px 0 24px}
+    .hero h2{font:800 48px/1.05 Playfair Display, serif;margin:10px 0}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .tags{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 18px}
+    .tag{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:8px 12px;border-radius:999px;color:#d7deea}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);box-shadow:var(--shadow)}
+
+    .gallery{display:grid;grid-template-columns:repeat(3, 1fr);gap:16px;margin:14px 0}
+    .shot{position:relative;overflow:hidden;border-radius:16px;background:#12161d;border:1px solid rgba(255,255,255,.06)}
+    .shot img{display:block;width:100%;height:220px;object-fit:cover;filter:saturate(1.1)}
+    .shot .cap{position:absolute;left:10px;bottom:10px;background:rgba(0,0,0,.45);backdrop-filter:blur(4px);padding:6px 10px;border-radius:10px;font-size:13px}
+
+    section{padding:26px 0}
+    h3{font:700 24px Inter;margin:0 0 10px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+
+    .list{display:grid;gap:10px}
+    .list li{list-style:none;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);padding:12px 14px;border-radius:12px}
+
+    .contact{display:grid;grid-template-columns:1fr .8fr;gap:18px;align-items:center}
+    form{display:grid;gap:12px}
+    input, textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:#0e1116;color:var(--text);outline:none}
+    textarea{min-height:120px;resize:vertical}
+    .note{color:var(--muted);font-size:14px;margin-top:6px}
+
+    footer{margin:38px 0 10px;color:#9fb0c8;font-size:14px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+    .social{display:flex;gap:10px}
+    .social a{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid rgba(255,255,255,.08);border-radius:12px;background:rgba(255,255,255,.02)}
+
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
+      .gallery{grid-template-columns:repeat(2, 1fr)}
+      .contact{grid-template-columns:1fr}
+    }
+    @media (max-width: 560px){
+      .gallery{grid-template-columns:1fr}
+      .hero h2{font-size:36px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <h1>Ossama — Art & Design</h1>
+      </div>
+      <a class="pill" href="#contact" aria-label="Jump to contact">Available • Let's work</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <div class="pill" style="margin-bottom:10px">Freelance • Digital</div>
+        <h2>Clean visuals for brands & creators.</h2>
+        <p>I create scroll‑stopping graphics, social media visuals, banners, and simple brand kits. Quick turnarounds. Clear communication.</p>
+        <div class="tags">
+          <span class="tag">Branding</span>
+          <span class="tag">Social Posts</span>
+          <span class="tag">Thumbnails</span>
+          <span class="tag">Posters</span>
+          <span class="tag">Covers</span>
+        </div>
+        <a class="btn" href="#portfolio" aria-label="View portfolio">View work ↓</a>
+      </div>
+      <div class="card" style="padding:16px">
+        <div class="gallery">
+          <!-- Replace image URLs with your own when you like -->
+          <figure class="shot"><img alt="Poster mockup" src="https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?q=80&w=1200&auto=format&fit=crop" /><figcaption class="cap">Poster • Bold</figcaption></figure>
+          <figure class="shot"><img alt="Gradient shapes" src="https://images.unsplash.com/photo-1611162618071-b39a2ec8d20d?q=80&w=1200&auto=format&fit=crop" /><figcaption class="cap">Cover • Abstract</figcaption></figure>
+          <figure class="shot"><img alt="Brand grid" src="https://images.unsplash.com/photo-1549082965-04b89e07ae8a?q=80&w=1200&auto=format&fit=crop" /><figcaption class="cap">Brand Kit</figcaption></figure>
+          <figure class="shot"><img alt="UI cards" src="https://images.unsplash.com/photo-1557264337-e8a93017fe92?q=80&w=1200&auto=format&fit=crop" /><figcaption class="cap">Social Cards</figcaption></figure>
+          <figure class="shot"><img alt="Colorful poster" src="https://images.unsplash.com/photo-1526318472351-c75fcf070305?q=80&w=1200&auto=format&fit=crop" /><figcaption class="cap">Event Poster</figcaption></figure>
+          <figure class="shot"><img alt="Typography" src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?q=80&w=1200&auto=format&fit=crop" /><figcaption class="cap">Typography</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <h3>Services</h3>
+      <div class="grid-2">
+        <ul class="list">
+          <li><strong>Logo & brand kit</strong> — colors, fonts, usage cheatsheet.</li>
+          <li><strong>Social media pack</strong> — post templates & story covers.</li>
+          <li><strong>Thumbnails & banners</strong> — YouTube, TikTok, Twitch.</li>
+          <li><strong>Posters & flyers</strong> — events, promos, product drops.</li>
+        </ul>
+        <ul class="list">
+          <li><strong>Quick edits</strong> — resize, retouch, typography polish.</li>
+          <li><strong>Pitch & one-pagers</strong> — clean PDF visuals that sell.</li>
+          <li><strong>Web hero graphics</strong> — landing visuals that convert.</li>
+          <li><strong>Custom requests</strong> — tell me your idea.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <h3>Selected Work</h3>
+      <p class="note">A few snapshots. Ask for a tailored sample if you have a specific style in mind.</p>
+      <div class="gallery">
+        <figure class="shot"><img alt="Album cover" src="https://images.unsplash.com/photo-1520975922203-b5e2b6ee0f5b?q=80&w=1200&auto=format&fit=crop" /><figcaption class="cap">Album Cover</figcaption></figure>
+        <figure class="shot"><img alt="Gradient poster" src="https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?q=80&w=1200&auto=format&fit=crop" /><figcaption class="cap">Poster • Gradient</figcaption></figure>
+        <figure class="shot"><img alt="Minimal brand" src="https://images.unsplash.com/photo-1536599018102-9f803c140fc1?q=80&w=1200&auto=format&fit=crop" /><figcaption class="cap">Minimal Brand</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="about">
+      <h3>About</h3>
+      <p>I'm Ossama, a freelance designer focused on simple, high‑impact visuals. I work with small businesses, creators, and startups worldwide. Fast communication, clear deliverables, and on‑time handoff.
+      </p>
+    </section>
+
+    <section id="contact" class="contact">
+      <div>
+        <h3>Contact</h3>
+        <p class="note">Tell me about your project, timeline, and any references you like.</p>
+        <form action="https://formsubmit.co/you@example.com" method="POST">
+          <!-- Replace you@example.com with your real email or switch to mailto below -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Your email" required>
+          <textarea name="message" placeholder="Project details" required></textarea>
+          <button class="btn" type="submit">Send message</button>
+        </form>
+        <p class="note">Prefer email? <a href="mailto:ossama.design@proton.me">ossama.design@proton.me</a></p>
+      </div>
+      <div class="card" style="padding:16px">
+        <ul class="list">
+          <li>Turnaround: typically 24–72h</li>
+          <li>Deliverables: PNG/JPG, PDF, and source files on request</li>
+          <li>Payments: bank transfer or online wallet</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <span>© <span id="y"></span> Ossama. All rights reserved.</span>
+    <div class="social">
+      <a href="#" aria-label="Behance">Behance</a>
+      <a href="#" aria-label="Dribbble">Dribbble</a>
+      <a href="#" aria-label="LinkedIn">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
