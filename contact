@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Ossama Mektane</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--bg:#0b0d10;
+--card:#11151c;
+--text:#edf1f7;
+--muted:#aab3c2;
+--accent:#8dd0ff;
+--ring:rgba(141,208,255,.25);
+--radius:20px;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:
+radial-gradient(circle at top right,rgba(141,208,255,.08),transparent 40%),
+radial-gradient(circle at bottom left,rgba(255,210,141,.06),transparent 40%),
+var(--bg);
+font-family:Inter,sans-serif;
+color:var(--text);
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:30px;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 0;
+}
+
+.logo{
+font-size:22px;
+font-weight:800;
+}
+
+.logo a{
+color:white;
+text-decoration:none;
+}
+
+.back{
+text-decoration:none;
+color:var(--accent);
+}
+
+.card{
+margin-top:40px;
+background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.015));
+border:1px solid rgba(255,255,255,.08);
+border-radius:22px;
+padding:40px;
+display:grid;
+grid-template-columns:280px 1fr;
+gap:40px;
+align-items:center;
+}
+
+.photo img{
+width:240px;
+height:240px;
+object-fit:cover;
+border-radius:20px;
+border:3px solid rgba(255,255,255,.08);
+}
+
+h1{
+font-family:"Playfair Display",serif;
+font-size:42px;
+margin-bottom:8px;
+}
+
+.subtitle{
+color:var(--accent);
+font-weight:600;
+margin-bottom:30px;
+}
+
+.info{
+display:grid;
+gap:18px;
+}
+
+.item{
+background:rgba(255,255,255,.03);
+border:1px solid rgba(255,255,255,.06);
+padding:18px;
+border-radius:16px;
+}
+
+.label{
+font-size:13px;
+color:var(--muted);
+margin-bottom:6px;
+text-transform:uppercase;
+letter-spacing:1px;
+}
+
+.value{
+font-size:18px;
+font-weight:600;
+word-break:break-word;
+}
+
+footer{
+margin:50px 0;
+text-align:center;
+color:var(--muted);
+font-size:14px;
+}
+
+@media(max-width:850px){
+
+.card{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.photo img{
+width:180px;
+height:180px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+
+<div class="logo">
+<a href="index.html">Ossama Mektane — Art & Design</a>
+</div>
+
+<a href="index.html" class="back">← Back to Home</a>
+
+</header>
+
+<div class="card">
+
+<div class="photo">
+<img src="https://i.ibb.co/0yZx3MXz/temp-Imagec8k-Hv-B.jpg" alt="Ossama Mektane">
+</div>
+
+<div>
+
+<h1>Business & Contact Information</h1>
+
+<div class="subtitle">
+Freelance Graphic Designer
+</div>
+
+<div class="info">
+
+<div class="item">
+<div class="label">Owner</div>
+<div class="value">Ossama Mektane</div>
+</div>
+
+<div class="item">
+<div class="label">Business</div>
+<div class="value">Ossama Mektane — Art & Design</div>
+</div>
+
+<div class="item">
+<div class="label">Email</div>
+<div class="value">ossamamektane@proton.me</div>
+</div>
+
+<div class="item">
+<div class="label">Phone</div>
+<div class="value">+212 775 774 438</div>
+</div>
+
+<div class="item">
+<div class="label">Address</div>
+<div class="value">
+Hay Pam Bloc 1 Nr 24<br>
+Morocco
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+© <script>document.write(new Date().getFullYear())</script>
+Ossama Mektane. All Rights Reserved.
+
+</footer>
+
+</div>
+
+</body>
+</html>
